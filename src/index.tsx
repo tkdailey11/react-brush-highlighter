@@ -55,7 +55,6 @@ export const Brush = (props: PropsWithChildren<IBrushProps>) => {
     <span
       style={{
         position: "relative",
-        padding: "7px 58px",
         ...(props.style || {}),
       }}
     >
@@ -66,12 +65,15 @@ export const Brush = (props: PropsWithChildren<IBrushProps>) => {
         version="1.1"
         x="0px"
         y="0px"
-        viewBox="0 0 1100 750"
-        style={{ position: "absolute", inset: 0, zIndex: -1 }}
-        width="auto"
-        height="auto"
-        enableBackground="new 0 0 1100 500"
-        preserveAspectRatio="none"
+        height={"150%"}
+        scale={1.5}
+        style={{
+          position: "absolute",
+          zIndex: -1,
+          width: "130%",
+          marginLeft: "-45px",
+          marginTop: "-15px",
+        }}
       >
         {renderBrush(props.type, props.color)}
       </svg>

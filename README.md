@@ -1,30 +1,73 @@
-# React + TypeScript + Vite
+# react-brush-highlighter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> React component for highlighting text. Forked from <a href="https://github.com/aleksandar-b/react-brush-text">https://github.com/aleksandar-b/react-brush-text</a>
 
-Currently, two official plugins are available:
+[![NPM](https://img.shields.io/npm/v/react-brush-highlighter.svg)](https://www.npmjs.com/package/react-brush-highlighter) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Install
 
-## Expanding the ESLint configuration
+```bash
+npm install --save react-brush-highlighter
+```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Example
+![img_1.png](img_1.png)
 
-- Configure the top-level `parserOptions` property like this:
+#### 8 different types
+![img.png](img.png)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+```jsx
+import React, { Component } from 'react'
+
+import { Brush } from 'react-brush-highlighter'
+
+class Example extends Component {
+  render() {
+    return (<>
+        <Brush style={{ padding: '17px 58px' }} type={1}>
+          <span style={{ color: 'white' }}>Your text goes here 😄</span>
+        </Brush>
+
+        <Brush style={{ padding: '17px 58px' }} type={2}>
+          <span style={{ color: 'white' }}>Your text goes here 😄</span>
+        </Brush>
+
+        <Brush style={{ padding: '17px 58px' }} type={3}>
+          <span style={{ color: 'white' }}>Your text goes here 😄</span>
+        </Brush>
+
+        <Brush
+          style={{
+            padding: '7px 58px',
+            paddingBottom: '15px',
+            paddingTop: '34px'
+          }}
+          type={4}
+        >
+          <span style={{ color: 'white' }}>Your text goes here 😄</span>
+        </Brush>
+
+        <Brush style={{ padding: '17px 78px', paddingBottom: '30px'}} type={5}>
+          <span style={{ color: 'white' }}>Your text goes here 😄</span>
+        </Brush>
+
+        <Brush style={{ padding: '17px 58px' }} type={6}>
+          <span style={{ color: 'white' }}>Your text goes here 😄</span>
+        </Brush>
+
+        <Brush style={{ padding: '17px 58px' }} type={7}>
+          <span style={{ color: 'white' }}>Your text goes here 😄</span>
+        </Brush>
+
+        <Brush style={{ padding: '17px 58px', paddingBottom: '35px',
+          paddingTop: '20px' }} type={8}>
+          <span style={{ color: 'white' }}>Your text goes here 😄</span>
+        </Brush>
+    </>
+  }
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## License
+
+MIT © [tkdailey11](https://github.com/tkdailey11)
